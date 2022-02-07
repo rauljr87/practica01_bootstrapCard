@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Archivo cdn sin modulo nodejs con bootstrap instalado
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">-->
+
+    <!--Estilos de tipado-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,600;0,900;1,100;1,700&family=Lora&family=Montserrat:ital,wght@0,500;1,100&display=swap" rel="stylesheet">
+
+    <!--Al instalar los modulos nodejs y bootstrap, crear la carpeta de nombre sass y en su interior crear un archivo custom.scss-->
+
+    <!--Llamando a archivos custom.css creado por el compilador sass, este archivo lo terminaremos reemplazando por uno reducido con purgecss ejecutado a través de un comando por package.json-->
+    <!--<link rel="stylesheet" href="sass/custom.css">-->
+
+    <!--Llamamos a nuestro nuevo archivo generado a traves de comando package.json el cual nos genera un nuevo archivo css-->
+    <link rel="stylesheet" href="css/reducido.css">
+
+    <!--Metodo para crear estilos propios en CSS pero no es recomendable, ya que lo mas recomendable es trabajar con sass, pero para el ejemplo se realiza esta configuración para indicar un media query para los dispositivos de 0 a 992px-->
+    <!--<style>
+        @media (min-width: 992px) {
+            .alto-100 {
+                height: 100vh;
+            }
+        }
+    </style>-->
+    <!--Cortamos este etilo ya que no es lo más recomendable y lo colocamos en nuestra carpeta custom.css-->
+
+    <title>Practica 2</title>
+</head>
+<body>
+    <!--Main para indicar el contenido principal-->
+    <!--Clase contenedor de bootstrap-->
+    <!--Alineado al centro en el eje Y, y Justificado al centro en el eje X-->
+    <!--Debemos indicar el alto del dispositivo si que queremos que tome el efecto del alineado y justificado-->
+    <!--<main class="container d-flex align-items-center justify-content-center vh-100">-->
+    <main class="container d-flex align-items-center justify-content-center alto-100">
+        <!--Una fila con dos columnas-->
+        <!--.div.row-->
+        <div class="row">
+            <!--Columna izquierda-->
+            <!--Empezando con el sistema mobile (class = col-12)-->
+            <!--Color desde el apartado Utilities de bootstrap-->
+            <div class="col-12 col-lg-9">
+
+                <div class="row">
+
+                    <div class="col-12 col-lg-8 p-2">
+                        <!--Article, son elementos que se duplican en el sitio web-->
+                        <!--Indicamos la clase card-->
+                        <article class="card h-100 bg-primary text-white fondo-card shadow-sm">
+                            <!-- .card. body; para el cuerpo de la tarjeta-->
+                            <div class="card-body">
+                                <!-- d-flex; para que los elementos se posiciones uno al lado del otro-->
+                                <div class="d-flex mb-3">
+                                    <!--Daniel-->
+                                    <img src="images/image-daniel.jpg" alt="" class="border border-secondary border-3 rounded-circle">
+                                    <!--Se puede hacer resposive para dispositivos pequeños por ejemplo ps-lg-3 -->
+                                    <div class="ps-3">
+                                        <h6 class="m-0 h6">Daniel Clifford</h6>
+                                        <p class="m-0 h6">Lorem, ipsum.</p>
+                                    </div>
+
+                                </div>
+                                <!--Siempre fuera del card body y fuera del d-flex, no ubicamos para colocar el texto-->
+                                <div>
+                                    <p class="h6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi expedita nihil dolores vero facere cumque aut assumenda! Voluptatem dolore aspernatur dignissimos similique, quia excepturi sapiente qui, consequuntur a consectetur eos.</p>
+                                    <p class="fs-6 lh-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quaerat blanditiis cumque asperiores! Adipisci, praesentium, aut laudantium quaerat ducimus quas sunt, repellendus saepe incidunt pariatur illum fugit fuga debitis expedita?</p>
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                    <div class="col-12 col-lg-4 p-2">
+
+                        <article class="card h-100 bg-success text-white shadow-sm">
+                            <!-- .card. body; para el cuerpo de la tarjeta-->
+                            <div class="card-body">
+                                <!-- d-flex; para que los elementos se posiciones uno al lado del otro-->
+                                <div class="d-flex mb-3">
+                                    <!--Jeannette-->
+                                    <img src="images/image-jeanette.jpg" alt="" class="border border-secondary border-3 rounded-circle">
+                                    <!--Se puede hacer resposive para dispositivos pequeños por ejemplo ps-lg-3 -->
+                                    <div class="ps-3">
+                                        <h6 class="m-0 h6">Daniel Clifford</h6>
+                                        <p class="m-0 h6">Lorem, ipsum.</p>
+                                    </div>
+
+                                </div>
+                                <!--Siempre fuera del card body y fuera del d-flex, no ubicamos para colocar el texto-->
+                                <div>
+                                    <p class="fs-6 lh-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quaerat blanditiis cumque asperiores! Adipisci, praesentium, aut laudantium quaerat ducimus quas sunt, repellendus saepe incidunt pariatur illum fugit fuga debitis expedita?</p>
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                    <div class="col-12 col-lg-4 p-2">
+
+                        <article class="card h-100 bg-secondary shadow-sm">
+                            <!-- .card. body; para el cuerpo de la tarjeta-->
+                            <div class="card-body">
+                                <!-- d-flex; para que los elementos se posiciones uno al lado del otro-->
+                                <div class="d-flex mb-3">
+                                    <!--Jonathan-->
+                                    <img src="images/image-jonathan.jpg" alt="" class="border border-secondary border-3 rounded-circle">
+                                    <!--Se puede hacer resposive para dispositivos pequeños por ejemplo ps-lg-3 -->
+                                    <div class="ps-3">
+                                        <h6 class="m-0 h6">Daniel Clifford</h6>
+                                        <p class="m-0 h6">Lorem, ipsum.</p>
+                                    </div>
+
+                                </div>
+                                <!--Siempre fuera del card body y fuera del d-flex, no ubicamos para colocar el texto-->
+                                <div>
+                                    <p class="fs-6 lh-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quaerat blanditiis cumque asperiores! Adipisci, praesentium, aut laudantium quaerat ducimus quas sunt, repellendus saepe incidunt pariatur illum fugit fuga debitis expedita?</p>
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                    <div class="col-12 col-lg-8 p-2">
+                        <article class="card h-100 bg-dark text-white shadow-sm">
+                            <!-- .card. body; para el cuerpo de la tarjeta-->
+                            <div class="card-body">
+                                <!-- d-flex; para que los elementos se posiciones uno al lado del otro-->
+                                <div class="d-flex mb-3">
+                                    <!--Kira-->
+                                    <img src="images/image-kira.jpg" alt="" class="border border-secondary border-3 rounded-circle">
+                                    <!--Se puede hacer resposive para dispositivos pequeños por ejemplo ps-lg-3 -->
+                                    <div class="ps-3">
+                                        <h6 class="m-0 h6">Daniel Clifford</h6>
+                                        <p class="m-0 h6">Lorem, ipsum.</p>
+                                    </div>
+
+                                </div>
+                                <!--Siempre fuera del card body y fuera del d-flex, no ubicamos para colocar el texto-->
+                                <div>
+                                    <p class="h6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi expedita nihil dolores vero facere cumque aut assumenda! Voluptatem dolore aspernatur dignissimos similique, quia excepturi sapiente qui, consequuntur a consectetur eos.</p>
+                                    <p class="fs-6 lh-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quaerat blanditiis cumque asperiores! Adipisci, praesentium, aut laudantium quaerat ducimus quas sunt, repellendus saepe incidunt pariatur illum fugit fuga debitis expedita?</p>
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div> 
+
+            <!--Columna derecha-->
+            <div class="col-12 col-lg-3 p-2">
+
+                        <article class="card h-100 bg-secondary shadow-sm">
+                            <!-- .card. body; para el cuerpo de la tarjeta-->
+                            <div class="card-body">
+                                <!-- d-flex; para que los elementos se posiciones uno al lado del otro-->
+                                <div class="d-flex mb-3">
+                                    <!--Patrick-->
+                                    <img src="images/image-patrick.jpg" alt="" class="border border-secondary border-3 rounded-circle">
+                                    <!--Se puede hacer resposive para dispositivos pequeños por ejemplo ps-lg-3 -->
+                                    <div class="ps-3">
+                                        <h6 class="m-0 h6">Daniel Clifford</h6>
+                                        <p class="m-0 h6">Lorem, ipsum.</p>
+                                    </div>
+
+                                </div>
+                                <!--Siempre fuera del card body y fuera del d-flex, no ubicamos para colocar el texto-->
+                                <div>
+                                    <p class="h6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi expedita nihil dolores vero facere cumque aut assumenda! Voluptatem dolore aspernatur dignissimos similique, quia excepturi sapiente qui, consequuntur a consectetur eos.</p>
+                                    <p class="fs-6 lh-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quaerat blanditiis cumque asperiores! Adipisci, praesentium, aut laudantium quaerat ducimus quas sunt, repellendus saepe incidunt pariatur illum fugit fuga debitis expedita?</p>
+                                </div>
+
+                            </div>
+
+                        </article>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
+
+<!--Nos podemos dirigir al archivo package.json para poder ejecutar el purgecss, en la línea de comando de los scripts reemplazamos la lina text por build:
+purgecss --css <css> --content <content> [options] -->
+<!-- <css> reemplazamos por la ruta de nuestro archivo css-->
+<!-- <content> equivale al contenido que lee el archivo css-->
+<!-- [options] equivale a las diferentes opciones que nos indica la documentación, -o 'path', salida de archivo optimizado en ruta específica-->
+<!--La líea de comando indica que estamos leyendo el custom el cual es el archivo custom.css que genera sass lo vamos a comparar con lo que utilice el archivo index.html y la salida, es decir toda las líneas de código reducidar lo llevamos a la carpeta indicada, en nuestro caso la carpeta css de la raiz del proyecto-->
+
+<!--Ejecutamos el comando con: npm run build-->
+
+<!--Al momento de realizar un nuevo cambio en nuestro archivo custom.scss, debemos ejecutar el run build para que se apliquen los cambios en nuestro sitio web, esto es debido a que nuestro archivo index.html estará escuchando a nuestro archivo reducido.css-->
